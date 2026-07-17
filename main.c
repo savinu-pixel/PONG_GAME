@@ -56,12 +56,6 @@ void menu(){
 				printf("Invaild Choice,Try Again.\n");
 		}
 		
-		if(choice !=  4 ){
-			printf("\nPress Enter to continue...");
-			getchar();
-		}
-		
-		
 	}while(choice != 4);
 }
 
