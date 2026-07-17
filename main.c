@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h> //for system();
 
-
+void menu();
+void loadHighScores();
 
 int main(){
 	loadHighScores();
@@ -11,7 +13,7 @@ int main(){
 void menu(){
 	int choice;
 	do{
-		system("cls"): //clears the screen
+		system("cls"); //clears the screen
 		
 		printf("************************\n");
         printf("       PONG GAME\n");
@@ -27,5 +29,10 @@ void menu(){
         scanf("%d", &choice);
 		
 		
-	}while(choice != 4)
+	}while(choice != 4);
+}
+
+void loadHighScores(){
+	//TODO
+	//load  scores from a file
 }
