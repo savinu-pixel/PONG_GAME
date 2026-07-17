@@ -3,6 +3,11 @@
 
 void menu();
 void loadHighScores();
+void startGame();
+void instructions();
+void displayResult();
+
+
 
 int main(){
 	loadHighScores();
@@ -27,6 +32,34 @@ void menu(){
         printf("************************\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
+		printf("************************\n");
+		while (getchar() != '\n'); //clear the input buffer
+		
+		
+		switch(choice){
+			
+			case 1:
+				printf("Loading ...\n");
+				printf("Starting the game...\n");
+				startGame();
+				break;
+			case 2:
+				instructions();
+				break;
+			case 3:			
+				displayResult();
+				break;
+			case 4:
+				printf("GOOD BYE !\n");
+				break;
+			default:
+				printf("Invaild Choice,Try Again.\n");
+		}
+		
+		if(choice !=  4 ){
+			printf("\nPress Enter to continue...");
+			getchar();
+		}
 		
 		
 	}while(choice != 4);
@@ -35,4 +68,22 @@ void menu(){
 void loadHighScores(){
 	//TODO
 	//load  scores from a file
+	printf("High scores");
+}
+
+void instructions(){
+	//TODO
+	//instructions
+	printf("instructions");
+}
+void startGame(){
+	//TODO
+	//Game starting..
+	printf("Game starting..");
+}
+
+void displayResult(){
+	//TODO
+	//result reading...
+	printf("result reading...");
 }
